@@ -1,5 +1,8 @@
 settings:
   teleportOnJoin: true
+  teleportOnFirstJoin: true
+  requirePermission:
+    spawn: false # Permission: isetspawn.spawn
   teleportLocation:
     x: 0
     y: 0

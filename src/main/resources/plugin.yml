@@ -10,4 +10,17 @@ softdepend: []
 commands:
   spawn:
     description: Teleport to spawn
-    usage: /spawn
+    usage: /spawn [player]
+  setspawn:
+    description: Set spawn to your location
+    usage: /setspawn
+permissions:
+  isetspawn.spawn:
+    description: Allows using /spawn
+    default: op
+  isetspawn.spawn.others:
+    description: Allows using /spawn on other players
+    default: op
+  isetspawn.setspawn:
+    description: Allows using /setspawn
+    default: op
