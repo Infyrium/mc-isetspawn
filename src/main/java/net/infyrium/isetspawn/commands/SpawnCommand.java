@@ -12,13 +12,13 @@ public class SpawnCommand extends TargetCommand {
     }
 
     @Override
-    protected Result execute(Player target) {
+    protected String execute(Player target) {
         Location spawnLocation = plugin.getSpawnLocation();
         if (spawnLocation == null) {
-            return new Result("Spawn world was not found.", "Spawn world was not found.");
+            return "spawn-world-not-found";
         }
 
         target.teleport(spawnLocation);
-        return new Result("Teleported to spawn!", target.getName() + " was teleported to spawn!");
+        return "spawn";
     }
 }

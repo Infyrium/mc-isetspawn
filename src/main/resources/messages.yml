@@ -1,0 +1,25 @@
+# Messages use the MiniMessage format: https://docs.advntr.dev/minimessage/format.html
+# Colors and styles: <red>, <green>, <#ffaa00>, <bold>, <gradient:red:blue>text</gradient>
+# Placeholders like <player> are listed in the comment above the message.
+# To show a literal "<" put a backslash before it: \<player>
+# An empty message ('') is not sent.
+
+messages:
+  no-permission: "You don't have permission to use this command."
+  no-permission-others: "You don't have permission to use this command on other players."
+  # <player>
+  player-not-online: "Player '<player>' is not online."
+  # <command>
+  usage-player: 'Usage: /<command> \<player>'
+  player-only: "This command can only be executed by a player."
+
+  # Messages ending with -other are sent to the one who used the command on another player: <player>
+
+  spawn: "Teleported to spawn!"
+  spawn-other: "<player> was teleported to spawn!"
+  spawn-world-not-found: "Spawn world was not found."
+  spawn-world-not-found-other: "Spawn world was not found."
+
+  setspawn: "Spawn has been set!"
+
+configVersion: 1 # Format version of this file, do not change

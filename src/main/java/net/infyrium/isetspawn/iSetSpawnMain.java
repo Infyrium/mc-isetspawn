@@ -8,15 +8,23 @@ import org.bukkit.plugin.java.JavaPlugin;
 import net.infyrium.isetspawn.commands.SetSpawnCommand;
 import net.infyrium.isetspawn.commands.SpawnCommand;
 import net.infyrium.isetspawn.listeners.PlayerJoinListener;
+import net.infyrium.isetspawn.managers.Messages;
+import net.infyrium.isetspawn.utils.ConfigUpdater;
 
 
 public class iSetSpawnMain extends JavaPlugin {
 
     private static final String PATH = "settings.teleportLocation.";
 
+    private Messages messages;
+
     @Override
     public void onEnable() {
+        ConfigUpdater.backupIfOutdated(this, "config.yml");
         saveDefaultConfig();
+
+        messages = new Messages(this);
+        messages.load();
 
         Location spawnLocation = getSpawnLocation();
         if (spawnLocation == null) {
@@ -38,6 +46,10 @@ public class iSetSpawnMain extends JavaPlugin {
     @Override
     public void onDisable() {
         getLogger().info("Plugin has been disabled!");
+    }
+
+    public Messages getMessages() {
+        return messages;
     }
 
     /**
