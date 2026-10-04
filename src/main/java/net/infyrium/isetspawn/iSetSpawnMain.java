@@ -7,6 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import net.infyrium.isetspawn.commands.SetSpawnCommand;
 import net.infyrium.isetspawn.commands.SpawnCommand;
+import net.infyrium.isetspawn.listeners.PlayerJoinListener;
 
 
 public class iSetSpawnMain extends JavaPlugin {

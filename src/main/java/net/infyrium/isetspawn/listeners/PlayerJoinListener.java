@@ -1,10 +1,12 @@
-package net.infyrium.isetspawn;
+package net.infyrium.isetspawn.listeners;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+
+import net.infyrium.isetspawn.iSetSpawnMain;
 
 public class PlayerJoinListener implements Listener {
 
